@@ -1,0 +1,6 @@
+{
+  "name": "GCET IV-I Student Resource Portal",
+  "description": "Menu-based single-page student resource hub and GitHub information portal for GCET IV Year I Semester.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
