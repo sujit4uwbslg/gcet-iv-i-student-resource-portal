@@ -6,6 +6,7 @@ import { BooksSection } from './components/BooksSection';
 import { TheoryUnitsSection } from './components/TheoryUnitsSection';
 import { LabNotebooksSection } from './components/LabNotebooksSection';
 import { ImportantNotesSection } from './components/ImportantNotesSection';
+import { VideoLecturesSection } from './components/VideoLecturesSection';
 import { GithubExplorer } from './components/GithubExplorer';
 import { AiStudyAssistant } from './components/AiStudyAssistant';
 import { FileViewerModal } from './components/FileViewerModal';
@@ -67,6 +68,10 @@ export default function App() {
             setActiveSection={setActiveSection}
             onOpenFileViewer={handleOpenFileViewer}
           />
+        )}
+
+        {activeSection === 'videos' && (
+          <VideoLecturesSection searchQuery={searchQuery} />
         )}
 
         {activeSection === 'books' && (

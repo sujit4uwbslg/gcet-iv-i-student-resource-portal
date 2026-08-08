@@ -12,9 +12,12 @@ import {
   BellRing,
   Bookmark,
   Code2,
-  FolderDown
+  FolderDown,
+  Youtube,
+  Play,
+  Clock
 } from 'lucide-react';
-import { COURSE_INFO, ANNOUNCEMENTS, REPO_URL, getRawUrl, getViewUrl } from '../data/repoData';
+import { COURSE_INFO, ANNOUNCEMENTS, REPO_URL, YOUTUBE_VIDEOS, getRawUrl, getViewUrl } from '../data/repoData';
 
 interface DashboardOverviewProps {
   setActiveSection: (section: string) => void;
@@ -47,7 +50,11 @@ export const DashboardOverview: React.FC<DashboardOverviewProps> = ({ setActiveS
           </p>
 
           {/* Key Resource Quick Badges */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+          <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 mb-6">
+            <div className="bg-slate-800/80 border border-slate-700/60 rounded-xl p-3 text-left">
+              <div className="text-xl font-bold text-red-400">11 Videos</div>
+              <div className="text-xs text-slate-400">Sujit Das Academy</div>
+            </div>
             <div className="bg-slate-800/80 border border-slate-700/60 rounded-xl p-3 text-left">
               <div className="text-xl font-bold text-blue-400">5 Units</div>
               <div className="text-xs text-slate-400">Theory Syllabus & Slides</div>
@@ -57,7 +64,7 @@ export const DashboardOverview: React.FC<DashboardOverviewProps> = ({ setActiveS
               <div className="text-xs text-slate-400">Jupyter Lab Notebooks</div>
             </div>
             <div className="bg-slate-800/80 border border-slate-700/60 rounded-xl p-3 text-left">
-              <div className="text-xl font-bold text-emerald-400">6 Textbooks</div>
+              <div className="text-xl font-bold text-emerald-400">6 Books</div>
               <div className="text-xs text-slate-400">Full Reference PDFs</div>
             </div>
             <div className="bg-slate-800/80 border border-slate-700/60 rounded-xl p-3 text-left">
@@ -68,6 +75,14 @@ export const DashboardOverview: React.FC<DashboardOverviewProps> = ({ setActiveS
 
           {/* Quick Action Buttons */}
           <div className="flex flex-wrap gap-3">
+            <button
+              onClick={() => setActiveSection('videos')}
+              className="inline-flex items-center space-x-2 px-4 py-2 bg-red-600 hover:bg-red-500 text-white rounded-xl text-xs font-bold shadow-md transition-all cursor-pointer"
+            >
+              <Youtube className="w-4 h-4" />
+              <span>Watch Video Lectures (11)</span>
+            </button>
+
             <button
               onClick={() => setActiveSection('lab')}
               className="inline-flex items-center space-x-2 px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-xl text-xs font-bold shadow-md transition-all cursor-pointer"
@@ -92,6 +107,77 @@ export const DashboardOverview: React.FC<DashboardOverviewProps> = ({ setActiveS
               <span>Ask AI Tutor</span>
             </button>
           </div>
+        </div>
+      </div>
+
+      {/* Featured Video Lectures Showcase */}
+      <div className="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xs">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4 pb-3 border-b border-slate-100 dark:border-slate-800">
+          <div className="flex items-center space-x-2">
+            <div className="w-8 h-8 rounded-lg bg-red-100 dark:bg-red-950/80 text-red-600 dark:text-red-400 flex items-center justify-center font-bold">
+              <Youtube className="w-4 h-4" />
+            </div>
+            <div>
+              <h3 className="text-sm font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                <span>Featured Video Lectures — Sujit Das Academy</span>
+                <span className="text-[10px] px-2 py-0.5 rounded-full bg-red-100 dark:bg-red-950 text-red-600 dark:text-red-300 font-bold border border-red-200 dark:border-red-800">
+                  11 Lectures
+                </span>
+              </h3>
+              <p className="text-[11px] text-slate-500">
+                Online video tutorials for GATE, UGC NET, JNTUH & GCET Deep Learning curriculum
+              </p>
+            </div>
+          </div>
+
+          <button
+            onClick={() => setActiveSection('videos')}
+            className="inline-flex items-center space-x-1.5 text-xs font-bold text-red-600 dark:text-red-400 hover:underline"
+          >
+            <span>View All 11 Video Tutorials</span>
+            <ArrowRight className="w-3.5 h-3.5" />
+          </button>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {YOUTUBE_VIDEOS.slice(0, 4).map((video) => (
+            <div
+              key={video.video_id}
+              onClick={() => setActiveSection('videos')}
+              className="group bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700/80 overflow-hidden hover:border-red-500/50 transition-all cursor-pointer flex flex-col justify-between"
+            >
+              <div className="relative aspect-video bg-slate-950 overflow-hidden">
+                <img
+                  src={`https://img.youtube.com/vi/${video.video_id}/hqdefault.jpg`}
+                  alt={video.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-slate-950/20 group-hover:bg-slate-950/10 transition-colors flex items-center justify-center">
+                  <div className="w-9 h-9 rounded-full bg-red-600 text-white flex items-center justify-center shadow-md">
+                    <Play className="w-4 h-4 fill-current ml-0.5" />
+                  </div>
+                </div>
+                <div className="absolute bottom-1.5 right-1.5 px-1.5 py-0.5 bg-slate-950/90 text-white text-[10px] font-mono font-bold rounded">
+                  {video.duration}
+                </div>
+              </div>
+
+              <div className="p-3 flex-1 flex flex-col justify-between">
+                <div>
+                  <span className="text-[10px] font-bold text-red-600 dark:text-red-400 uppercase tracking-wider block mb-1">
+                    {video.unit} • {video.channel_name}
+                  </span>
+                  <h4 className="text-xs font-bold text-slate-900 dark:text-slate-100 line-clamp-2 group-hover:text-red-600 transition-colors">
+                    {video.title}
+                  </h4>
+                </div>
+                <div className="mt-2 text-[10px] text-slate-500 dark:text-slate-400 flex items-center justify-between">
+                  <span>Published {video.publish_date}</span>
+                  <span className="font-semibold text-blue-600 dark:text-blue-400">Watch Now →</span>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
 

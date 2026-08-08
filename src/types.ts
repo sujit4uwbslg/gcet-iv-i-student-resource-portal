@@ -1,4 +1,17 @@
-export type ResourceCategory = 'all' | 'books' | 'theory' | 'lab' | 'notes' | 'homework';
+export interface VideoResource {
+  channel_name: string;
+  video_id: string;
+  title: string;
+  url: string;
+  publish_date: string;
+  duration: string;
+  view_count: number;
+  like_count: number;
+  unit?: string;
+  topics?: string[];
+}
+
+export type ResourceCategory = 'all' | 'books' | 'theory' | 'lab' | 'notes' | 'homework' | 'videos';
 
 export interface RepoFile {
   path: string;

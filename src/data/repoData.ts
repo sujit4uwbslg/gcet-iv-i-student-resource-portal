@@ -605,3 +605,138 @@ export const HOMEWORK_ASSIGNMENTS = [
     description: 'Numerical problems on backpropagation step-by-step calculations and learning rate decay.',
   },
 ];
+
+export const YOUTUBE_VIDEOS: VideoResource[] = [
+  {
+    channel_name: "Sujit Das Academy",
+    video_id: "yqTWsuYDpIM",
+    title: "Introduction to Deep Learning | What is Deep Learning?| Basic Ideas| Gate 2025| UGC NET 2025",
+    url: "https://www.youtube.com/watch?v=yqTWsuYDpIM",
+    publish_date: "2025-12-09",
+    duration: "0:34",
+    view_count: 84,
+    like_count: 6,
+    unit: "Unit I",
+    topics: ["Introduction", "Deep Learning Basics", "GATE / UGC NET Prep"]
+  },
+  {
+    channel_name: "Sujit Das Academy",
+    video_id: "LiDzZlyBdXQ",
+    title: "Understanding Single Layer Perceptron (SLP) with Example |Deep Learning|UGCNET 2026|GATE2026",
+    url: "https://www.youtube.com/watch?v=LiDzZlyBdXQ",
+    publish_date: "2025-12-11",
+    duration: "1:04",
+    view_count: 49,
+    like_count: 2,
+    unit: "Unit I",
+    topics: ["Single Layer Perceptron", "SLP Example", "Neural Networks"]
+  },
+  {
+    channel_name: "Sujit Das Academy",
+    video_id: "Hhcc5oV5gzU",
+    title: "Separability and Non separable problems| Deep Learning | XOR Problem|GATE2026|UGCNET 2026",
+    url: "https://www.youtube.com/watch?v=Hhcc5oV5gzU",
+    publish_date: "2025-12-16",
+    duration: "2:06",
+    view_count: 163,
+    like_count: 4,
+    unit: "Unit I",
+    topics: ["Linear Separability", "XOR Problem", "Non-linear Classification"]
+  },
+  {
+    channel_name: "Sujit Das Academy",
+    video_id: "_g2LsUC-e9A",
+    title: "Activation Function in Neural Network Explained Part 1| Deep Learning| Machine Learning|GATE2026",
+    url: "https://www.youtube.com/watch?v=_g2LsUC-e9A",
+    publish_date: "2025-12-21",
+    duration: "2:12",
+    view_count: 71,
+    like_count: 3,
+    unit: "Unit I",
+    topics: ["Activation Functions", "Non-linearity", "Machine Learning"]
+  },
+  {
+    channel_name: "Sujit Das Academy",
+    video_id: "Yb7IREq6Cn4",
+    title: "Activation Function Part 2 Step Activation Function| Threshold Activation Function|UGCNET2026",
+    url: "https://www.youtube.com/watch?v=Yb7IREq6Cn4",
+    publish_date: "2025-12-22",
+    duration: "1:42",
+    view_count: 65,
+    like_count: 2,
+    unit: "Unit I",
+    topics: ["Step Function", "Threshold Function", "Binary Activation"]
+  },
+  {
+    channel_name: "Sujit Das Academy",
+    video_id: "awmN_rJQAyo",
+    title: "Sigmoid Activation Function Explained | Activation Function Part3|Deep Learning|GATE2026|UGCNET2026",
+    url: "https://www.youtube.com/watch?v=awmN_rJQAyo",
+    publish_date: "2025-12-23",
+    duration: "2:02",
+    view_count: 91,
+    like_count: 1,
+    unit: "Unit I",
+    topics: ["Sigmoid Function", "Logistic Curve", "Probability Mapping"]
+  },
+  {
+    channel_name: "Sujit Das Academy",
+    video_id: "6n8iM3LdHN8",
+    title: "Hyperbolic Tangent (Tanh) activation function| deep learning|gate2026|ugcnet2026",
+    url: "https://www.youtube.com/watch?v=6n8iM3LdHN8",
+    publish_date: "2025-12-30",
+    duration: "2:04",
+    view_count: 195,
+    like_count: 2,
+    unit: "Unit I",
+    topics: ["Tanh Activation", "Zero-centered Activation", "Grading"]
+  },
+  {
+    channel_name: "Sujit Das Academy",
+    video_id: "y8dN-h39jOw",
+    title: "RELU Leaky RELU GELU SOFTMAX Activation Function Explained| GATE 2026 UGCNET 2026 JNTUH",
+    url: "https://www.youtube.com/watch?v=y8dN-h39jOw",
+    publish_date: "2026-01-11",
+    duration: "4:59",
+    view_count: 94,
+    like_count: 1,
+    unit: "Unit I",
+    topics: ["ReLU", "Leaky ReLU", "GELU", "Softmax"]
+  },
+  {
+    channel_name: "Sujit Das Academy",
+    video_id: "89L06uPwFoU",
+    title: "Approximate An Arbitrary Function With Network of Neurons|Deep Learning|GATE 2026|UGCNET2026",
+    url: "https://www.youtube.com/watch?v=89L06uPwFoU",
+    publish_date: "2026-01-17",
+    duration: "4:23",
+    view_count: 55,
+    like_count: 0,
+    unit: "Unit I",
+    topics: ["Universal Approximation Theorem", "Function Approximation"]
+  },
+  {
+    channel_name: "Sujit Das Academy",
+    video_id: "2NH2qzbRZ4o",
+    title: "Backpropagation Objectives | Deep Learning| JNTUH | GATE 2026 | UGC NET 2026",
+    url: "https://www.youtube.com/watch?v=2NH2qzbRZ4o",
+    publish_date: "2026-07-18",
+    duration: "2:04",
+    view_count: 24,
+    like_count: 0,
+    unit: "Unit II",
+    topics: ["Backpropagation", "Optimization Objectives", "Error Surface"]
+  },
+  {
+    channel_name: "Sujit Das Academy",
+    video_id: "qqxVo6o56vs",
+    title: "Backpropagation and Chain Rule| Deep Learning| GATE 2026| UGCNET 2026|JNTUH",
+    url: "https://www.youtube.com/watch?v=qqxVo6o56vs",
+    publish_date: "2026-07-20",
+    duration: "6:03",
+    view_count: 65,
+    like_count: 0,
+    unit: "Unit II",
+    topics: ["Chain Rule", "Weight Gradients", "Backpropagation Math"]
+  }
+];
