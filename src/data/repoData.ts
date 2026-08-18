@@ -738,5 +738,42 @@ export const YOUTUBE_VIDEOS: VideoResource[] = [
     like_count: 0,
     unit: "Unit II",
     topics: ["Chain Rule", "Weight Gradients", "Backpropagation Math"]
+  },
+  
+  {
+    channel_name: "Sujit Das Academy",
+    video_id: "cA3e0Ldql4Y",
+    title: "Classical Gradient Descent and Limitations | Deep Learning | GATE 2026 | UGCNET 2026 | JNTUH",
+    url: "https://www.youtube.com/watch?v=cA3e0Ldql4Y",
+    publish_date: "2026-08-18",
+    duration: "<DURATION>",
+    view_count: 0,
+    like_count: 0,
+    unit: "Unit II",
+    topics: [
+      "Classical Gradient Descent",
+      "Gradient Descent Algorithm",
+      "Learning Rate",
+      "Limitations of Gradient Descent"
+    ]
+  },
+  {
+    channel_name: "Sujit Das Academy",
+    video_id: "BPfRmo-jQUc",
+    title: "Momentum Based Gradient Descent | Deep Learning | GATE 2026 | UGCNET 2026 | JNTUH",
+    url: "https://www.youtube.com/watch?v=BPfRmo-jQUc",
+    publish_date: "2026-08-18",
+    duration: "<DURATION>",
+    view_count: 0,
+    like_count: 0,
+    unit: "Unit II",
+    topics: [
+      "Momentum Based Gradient Descent",
+      "Momentum",
+      "Gradient Descent Optimization",
+      "Learning Rate",
+      "Convergence"
+    ]
   }
+
 ];
