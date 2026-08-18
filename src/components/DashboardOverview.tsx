@@ -52,7 +52,7 @@ export const DashboardOverview: React.FC<DashboardOverviewProps> = ({ setActiveS
           {/* Key Resource Quick Badges */}
           <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 mb-6">
             <div className="bg-slate-800/80 border border-slate-700/60 rounded-xl p-3 text-left">
-              <div className="text-xl font-bold text-red-400">11 Videos</div>
+              <div className="text-xl font-bold text-red-400">13 Videos</div>
               <div className="text-xs text-slate-400">Sujit Das Academy</div>
             </div>
             <div className="bg-slate-800/80 border border-slate-700/60 rounded-xl p-3 text-left">
@@ -80,7 +80,7 @@ export const DashboardOverview: React.FC<DashboardOverviewProps> = ({ setActiveS
               className="inline-flex items-center space-x-2 px-4 py-2 bg-red-600 hover:bg-red-500 text-white rounded-xl text-xs font-bold shadow-md transition-all cursor-pointer"
             >
               <Youtube className="w-4 h-4" />
-              <span>Watch Video Lectures (11)</span>
+              <span>Watch Video Lectures (13)</span>
             </button>
 
             <button
