@@ -11,10 +11,15 @@ import { GithubExplorer } from './components/GithubExplorer';
 import { AiStudyAssistant } from './components/AiStudyAssistant';
 import { FileViewerModal } from './components/FileViewerModal';
 import { Footer } from './components/Footer';
+import { NoticeBoardSection } from './components/NoticeBoardSection';
+import { CourseAnnouncement } from './types';
+import { NoticeBoardTicker } from './components/NoticeBoardTicker';
 
 export default function App() {
   const [activeSection, setActiveSection] = useState<string>('overview');
   const [searchQuery, setSearchQuery] = useState<string>('');
+  const [selectedNoticeId, setSelectedNoticeId] = useState<string | null>(null);
+
 
   // Active File Viewer Modal state
   const [viewingFile, setViewingFile] = useState<{ title: string; path: string } | null>(null);
@@ -25,6 +30,11 @@ export default function App() {
 
   const handleCloseFileViewer = () => {
     setViewingFile(null);
+  };
+
+   const handleSelectTickerNotice = (notice: CourseAnnouncement) => {
+    setSelectedNoticeId(notice.id);
+    setActiveSection('notices');
   };
 
   return (
@@ -38,12 +48,30 @@ export default function App() {
         setActiveSection={setActiveSection}
       />
 
+      {/* Scrolling / Animated Notice Board Ticker Bar */}
+      <NoticeBoardTicker
+        onSelectNotice={handleSelectTickerNotice}
+        onOpenNoticeBoard={() => {
+          setSelectedNoticeId(null);
+          setActiveSection('notices');
+        }}
+      />
+
       {/* Menu-based One Page Navigation */}
+      <MenuNav
+        activeSection={activeSection}
+        setActiveSection={(sec) => {
+          if (sec !== 'notices') setSelectedNoticeId(null);
+          setActiveSection(sec);
+        }}
+      />
+
+      {/* Menu-based One Page Navigation 
       <MenuNav
         activeSection={activeSection}
         setActiveSection={setActiveSection}
       />
-
+        */}
       {/* Main Content Area */}
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
         
@@ -67,6 +95,15 @@ export default function App() {
           <DashboardOverview
             setActiveSection={setActiveSection}
             onOpenFileViewer={handleOpenFileViewer}
+          />
+        )}
+
+        {activeSection === 'notices' && (
+          <NoticeBoardSection
+            searchQuery={searchQuery}
+            selectedNoticeId={selectedNoticeId}
+            onOpenFileViewer={handleOpenFileViewer}
+            setActiveSection={setActiveSection}
           />
         )}
 

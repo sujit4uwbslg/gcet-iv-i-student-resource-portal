@@ -7,7 +7,8 @@ import {
   FileCheck2, 
   FolderGit2, 
   Sparkles,
-  Youtube 
+  Youtube,
+  Bell
 } from 'lucide-react';
 
 export interface MenuItem {
@@ -25,6 +26,7 @@ interface MenuNavProps {
 
 export const MENU_ITEMS: MenuItem[] = [
   { id: 'overview', label: 'Overview', icon: LayoutDashboard },
+  { id: 'notices', label: 'Notice Board', icon: Bell, badge: 'Live Updates', badgeColor: 'bg-red-500/10 text-red-600 dark:text-red-400 border-red-500/20' },
   { id: 'videos', label: 'Video Lectures', icon: Youtube, badge: 'Sujit Das Academy', badgeColor: 'bg-red-500/10 text-red-600 dark:text-red-400 border-red-500/20' },
   { id: 'books', label: 'Textbooks', icon: BookMarked, badge: '6 Books', badgeColor: 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20' },
   { id: 'theory', label: 'Theory & Units', icon: GraduationCap, badge: 'Units I-V', badgeColor: 'bg-blue-500/10 text-blue-600 dark:text-blue-400 border-blue-500/20' },

@@ -49,6 +49,11 @@ export const Footer: React.FC<FooterProps> = ({ setActiveSection }) => {
                 </button>
               </li>
               <li>
+                <button onClick={() => setActiveSection('notices')} className="hover:text-white transition-colors cursor-pointer">
+                  📢 Official Notice Board & Circulars
+                </button>
+              </li>
+              <li>
                 <button onClick={() => setActiveSection('videos')} className="hover:text-white transition-colors cursor-pointer">
                   🎥 Video Lectures (Sujit Das Academy)
                 </button>

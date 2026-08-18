@@ -37,7 +37,7 @@ export const DashboardOverview: React.FC<DashboardOverviewProps> = ({ setActiveS
         <div className="relative z-10 max-w-3xl">
           <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs font-semibold mb-4 border border-blue-500/30">
             <GraduationCap className="w-3.5 h-3.5" />
-            <span>GCET IV Year - I Semester • Academic Year 2025</span>
+            <span>GCET IV Year - I Semester • Academic Year 2026</span>
           </div>
 
           <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white mb-2 leading-tight">
@@ -121,7 +121,7 @@ export const DashboardOverview: React.FC<DashboardOverviewProps> = ({ setActiveS
               <h3 className="text-sm font-bold text-slate-900 dark:text-white flex items-center gap-2">
                 <span>Featured Video Lectures — Sujit Das Academy</span>
                 <span className="text-[10px] px-2 py-0.5 rounded-full bg-red-100 dark:bg-red-950 text-red-600 dark:text-red-300 font-bold border border-red-200 dark:border-red-800">
-                  11 Lectures
+                  13 Lectures
                 </span>
               </h3>
               <p className="text-[11px] text-slate-500">

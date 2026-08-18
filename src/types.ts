@@ -93,7 +93,15 @@ export interface CourseAnnouncement {
   id: string;
   date: string;
   title: string;
+  summary: string;
   content: string;
-  tag: 'Important' | 'Lab' | 'Exam' | 'General';
+  tag: 'Important' | 'Lab' | 'Exam' | 'General' | 'Circular' | 'Video' | 'Academic';
+  priority?: 'Urgent' | 'High' | 'Normal';
+  isPinned?: boolean;
+  author?: string;
   linkPath?: string;
+  externalUrl?: string;
+  actionLabel?: string;
+  targetSection?: string;
+  detailsList?: string[];
 }
