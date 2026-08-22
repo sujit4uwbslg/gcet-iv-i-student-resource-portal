@@ -32,20 +32,20 @@ export const ANNOUNCEMENTS: CourseAnnouncement[] = [
   {
     id: 'ann-1',
     date: '2025-08-15',
-    title: 'Mid-1 Examination Schedule & Unit Coverage Announced',
+    title: 'Mid-1 Examination Schedule & Unit Coverage Announced(2026-2027)',
     summary: 'Mid-1 examinations for IV Year I Sem Deep Learning cover Unit I (Perceptrons & Activations) and Unit II (Backpropagation & Math).',
     content: 'The Mid-1 Examination for IV Year I Semester B.Tech (CSE / AI&ML) is scheduled to commence shortly. All students must revise Unit I and Unit II thoroughly along with numerical derivations of gradient descent and weight update equations.',
     tag: 'Exam',
     priority: 'Urgent',
     isPinned: true,
     author: 'GCET Examination Cell & Department of CSE',
-    linkPath: 'important_notes/DL_important_questions.pdf',
+    linkPath: '2026-27/MID1 important question/DEEP LEARNING IMPORTANT QUESTIONS(4-1) 2026-2027.pdf',
     actionLabel: 'View Mid Exam Important Questions',
     targetSection: 'notes',
     detailsList: [
       'Syllabus: Unit 1 (SLP, MLP, Activation functions: Sigmoid, Tanh, ReLU, Softmax) and Unit 2 (Backpropagation algorithm, Chain rule, Loss functions).',
       'Weightage: 25 Marks descriptive + 10 Marks objective/quiz.',
-      'Refer to "important_notes/DL_important_questions.pdf" and "important_notes/MATH_PROBLEM_SOLUTIONS.pdf" for step-by-step numerical practice.'
+      'Refer to "2026-27/MID1 important question/DEEP LEARNING IMPORTANT QUESTIONS(4-1) 2026-2027.pdf" and "2026-27/MID1 important question/MATH_PROBLEM_SOLUTIONS.pdf" for step-by-step numerical practice.'
     ],
   },
   {
